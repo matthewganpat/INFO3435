@@ -1,0 +1,1409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://movietowne.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Welcome to MOVIETOWNE</title>
+
+
+
+<script type="text/javascript" async="" src="./Welcome to MOVIETOWNE_files/ga.js"></script><script type="text/javascript" src="./Welcome to MOVIETOWNE_files/jquery-1.7.2.js"></script>	
+
+<script type="text/javascript" language="javascript" src="./Welcome to MOVIETOWNE_files/jquery.dropdownPlain.js"></script>
+
+<script language="JAVASCRIPT">
+
+//var img='{ARRIMG}';
+
+//"images/presenters_name.gif".","."images/img_1.jpg".","."images/img_2.jpg";
+
+//var img="images/mtm-movietowne-web-ad.gif"+","+"images/movie_ad.gif"+","+"images/movietown12345.jpg";
+
+var img="images/new_website_coming_soon.jpg,images/fiesta_ad.gif";
+
+//var imgtar="target=_blank"+","+"target=_self";
+
+var imgurl = "#,#";
+
+//arrimageurl = arrimageurl & "http://"&rs("Link") & ","
+
+var adImages =img.split(","); 
+
+//var adTar =imgtar.split(","); 
+
+var adImageurl =imgurl.split(",");
+
+var thisAd = 0 ;  
+
+var imgCt = 2; 
+
+
+
+ 
+
+/*var tar;  
+
+if(imgurl =="#")
+
+{
+
+tar="_self";
+
+}
+
+else
+
+{
+
+tar="_blank";
+
+}*/
+
+
+
+
+
+function cycle()
+
+{              
+
+	var banurl = document.getElementById("adBannerurl");  
+
+	//var bantar = document.getElementById("adBannerurl");  
+
+	if(imgCt != 0)
+
+	{
+
+
+
+	if (document.images) 
+
+	{
+
+		thisAd++
+
+		if (thisAd == imgCt)
+
+		{
+
+		thisAd = 0   
+
+		} 
+
+
+
+		document.adBanner.src=adImages[thisAd];
+
+		banurl.href=adImageurl[thisAd] ;
+
+		//bantar.href=adImagetar[thisAd] ;
+
+		//setTimeout("cycle()",30000)   
+
+		setTimeout("cycle()",30000)   
+
+	}
+
+	}
+
+}                // End hiding script from old browsers --> 
+
+</script>
+
+<script language="JavaScript1.2">
+
+<!--
+
+
+
+
+
+var maxW,maxH,fromX,fromY,toX,toY,adjX,adjY,zBox,zStep=0,zLink,zNew;
+
+
+
+function zoomBox(evt,zlink,maxw,maxh,tox,toy) {
+
+	if (arguments.length > 2) zNew=1;
+
+	scrollH=(window.pageYOffset!=null)?window.pageYOffset:document.body.scrollTop;
+
+	maxW=maxw?maxw:window.innerWidth?innerWidth:document.body.clientWidth;
+
+	maxH=maxh?maxh:window.innerHeight?innerHeight:document.body.clientHeight;
+
+	toX=tox?tox:0;
+
+	toY=(toy?toy:0)+scrollH;
+
+	fromX=evt.pageX?evt.pageX:evt.clientX;
+
+	fromY=(evt.pageY?evt.pageY:evt.clientY)+(document.all?scrollH:0);
+
+	adjX=toX+evt.screenX-fromX;
+
+	adjY=toY+evt.screenY-fromY;
+
+	if (document.createElement && document.body.appendChild && !zBox) {
+
+		zBox=document.createElement("div");
+
+		zBox.style.position="absolute";
+
+		document.body.appendChild(zBox);
+
+	} else if (document.all && !zBox) {
+
+		document.all[document.all.length-1].outerHTML+="<div id=zBoxDiv style=position:absolute></div>";
+
+		zBox=document.all.zBoxDiv;
+
+	} else if (document.layers && !zBox) {
+
+		zBox=new Layer(maxW);
+
+		zBox.style=zBox;
+
+	}
+
+	zLink=zlink;
+
+	doZoom();
+
+}
+
+
+
+function doZoom() {
+
+zStep+=1;
+
+zPct=(10-zStep)/10
+
+	if (document.layers) {
+
+		zBox.moveTo(toX+zPct*(fromX-toX),toY+zPct*(fromY-toY));
+
+		zBox.document.open();
+
+		zBox.document.write("<table width="+maxW*(1-zPct)+" height="+maxH*(1-zPct)+" border=2 cellspacing=0><tr><td></td></tr></table>");
+
+		zBox.document.close();
+
+		} else {
+
+		zBox.style.border="2px solid #999999";
+
+		zBox.style.left=toX+zPct*(fromX-toX);
+
+		zBox.style.top=toY+zPct*(fromY-toY);
+
+		zBox.style.width=maxW*(1-zPct);
+
+		zBox.style.height=maxH*(1-zPct);
+
+	}
+
+	zBox.style.visibility="visible";
+
+	if (zStep < 10) setTimeout("doZoom("+fromX+","+fromY+","+toX+","+toY+")",30);
+
+	else {
+
+		zBox.style.visibility="hidden";
+
+		zStep=0;
+
+		if (zLink && !zNew) location.href=zLink.href;
+
+		else if (zLink && zNew) {
+
+			var w=window.open(zLink.href,"","width="+maxW+",height="+maxH+",left="+adjX+",top="+adjY+",No,resizable");
+
+			zNew=null;
+
+		}
+
+	}
+
+}
+
+//-->
+
+</script>
+
+
+
+<style type="text/css">
+
+<!--
+
+.navlinks{ width:577px; float:left; margin:0; padding:0}
+
+/* 	LEVEL ONE*/
+
+ul									{ list-style: none; margin:0; padding:0; z-index:9999}
+
+ul.dropdown                         { position: relative;  }
+
+ul.dropdown li                      { font-weight: bold; float: left; zoom: 1;color: #0861ad;  }
+
+ul.dropdown a:hover		            { color: #0861ad; }
+
+ul.dropdown a:active                { color: #0861ad; }
+
+ul.dropdown li a                    { display: block; padding: 3px 12px; color: #0861ad; font-size:12px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; text-decoration:none }
+
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+
+ul.dropdown li.hover,
+
+ul.dropdown li:hover                {  color: #0861ad;position: relative; }
+
+ul.dropdown li.hover a              { color: #0861ad; }
+
+ul.dropdown li a.active                { background: #00a560; color: #FFF; position: relative; }
+
+
+
+/* 	LEVEL TWO*/
+
+ul.dropdown ul 						{ width: 162px; visibility: hidden; position: absolute; top: 100%; left: 0; border: 1px solid #555555; }
+
+ul.dropdown ul li 					{ font-weight: bold; background: #ffeb00; color: #0869ae; border-bottom: 1px solid #555555; float: none; font-size:12px; font-family:Arial, Helvetica, sans-serif }								  
+
+ul.dropdown ul li:hover a			{ background:#ff9900; width: 138px; color:#FFF;}
+
+/* IE 6 & 7 Needs Inline Block */
+
+ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; } 
+
+
+
+/* 	LEVEL THREE*/
+
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+
+ul.dropdown li:hover > ul 			{ visibility: visible; }
+
+.text {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	color: #FFCC00;
+
+}
+
+body {
+
+	margin-left: 0px;
+
+	margin-top: 0px;
+
+	margin-right: 0px;
+
+	margin-bottom: 0px;
+
+}
+
+.link
+
+{
+
+font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	color: #999999;
+
+}
+.style1 {color: #000000}
+
+-->
+
+</style>
+
+
+
+<!--#include file="popup.php" -->
+
+</head>
+
+<body background="./Welcome to MOVIETOWNE_files/starbg.jpg" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF" onload="cycle();">
+
+
+
+<table width="662" border="0" align="center" cellpadding="0" cellspacing="0">
+
+  <tbody><tr>
+
+    <td colspan="2"><div align="left">
+
+        <table border="0" cellpadding="0" cellspacing="0" width="780">
+
+          <!-- fwtable fwsrc="movietownemasthead.png" fwbase="movietownemasthead.jpg" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="1" -->
+
+          <tbody><tr>
+
+            <td colspan="2"><img src="./Welcome to MOVIETOWNE_files/movietownemasthead_r1_c1ind.jpg" alt="" name="movietownemasthead_r1_c1" width="780" height="23" border="0" usemap="#movietownemasthead_r1_c1Map"></td>
+
+          </tr>
+
+          <tr>
+
+            <td rowspan="4" valign="top" bgcolor="#FFEB00"><img name="movietownemasthead_r2_c1" src="./Welcome to MOVIETOWNE_files/movietownemasthead_r2_c1.jpg" width="203" height="215" border="0" alt=""></td>
+
+            <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="577" height="192">
+
+                <param name="movie" value="images/movie.swf">
+
+                <param name="quality" value="high">
+
+                <param name="wmode" value="transparent">
+
+                <embed src="images/movie.swf" width="577" height="192" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent">
+
+            </object></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img name="movietownemasthead_r3_c2" src="./Welcome to MOVIETOWNE_files/movietownemasthead_r3_c2.jpg" width="577" height="5" border="0" alt=""></td>
+
+          </tr>
+
+          <tr>
+
+            <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                <tbody><tr>
+
+                  <td bgcolor="#FFEB00" height="20">
+
+                  		<!-- Navigation and searchox starts -->
+
+                            <div class="navlinks">
+
+                                        <ul class="dropdown">
+
+                                        	<li><a href="http://survey.constantcontact.com/survey/a07e39ul5f4gisgp56y/a002givh7qne/questions" target="_blank">survey</a></li>
+
+                                            <li>|</li>
+
+                                            <li class=""><a href="http://movietowne.com/#">now showing</a>
+
+                                                <ul class="sub_menu" style="visibility: hidden;">
+
+                                                     <li><a href="http://movietowne.com/nowshowing.php">Port of Spain</a></li>
+
+                                                     <li><a href="http://movietowne.com/nowshowing-chaguanas.php">Chaguanas</a></li>
+
+                                                     <li><a href="http://movietowne.com/nowshowing-tobago.php">Tobago</a></li>
+
+                                                </ul>
+
+                                            </li>
+
+                                            <li>|</li>
+
+                                            <li class=""><a href="http://movietowne.com/specials.htm">specials</a></li>
+
+                                            <li>|</li>
+
+                                            <li><a href="http://movietowne.com/#">shopping directory</a>
+
+                                                <ul class="sub_menu">
+
+                                                    <li><a href="http://movietowne.com/retail_stores.htm">Retails Stores</a></li>
+
+                                                    <li><a href="http://movietowne.com/restaurants.htm">Restaurants</a></li>
+
+                                                </ul>
+
+                                            </li>
+
+                                            <li>|</li>
+
+                                            <li><a href="http://movietowne.com/#">about us</a>
+
+                                                <ul class="sub_menu">
+
+                                                     <li><a href="http://movietowne.com/family.htm">The MovieTowne Family</a></li>
+
+                                                     <li><a href="http://movietowne.com/photo-gallery.htm">Photo Gallery</a></li>
+
+                                                     <li><a href="http://movietowne.com/contactus.php">Contact Us</a></li>
+
+                                                     <li><a href="http://movietowne.com/media_kit.htm">Advertise with US</a></li>
+
+                                                     <li><a href="http://movietowne.com/theater_rentals.htm">Theatre Rentals</a></li>
+
+                                                     <li><a href="http://movietowne.com/jobs.htm">Job Opportunties</a></li>
+
+                                                     <li><a href="http://movietowne.com/policies.htm">Polices</a></li>
+
+                                                     <li><a href="http://movietowne.com/documents/2005_Tenancy_Application_Form.pdf" target="_blank">Tenancy Application Form</a></li>
+
+                                                </ul>
+
+                                            </li>
+
+                                            <li>|</li>
+
+                                            <li class=""><a href="http://movietowne.com/#">just 4 kids</a>
+
+                                                <ul class="sub_menu" style="visibility: hidden;">
+
+                                                     <li><a href="http://movietowne.com/playrooms.htm">Birthday Parties</a></li>
+
+                                                     <li><a href="http://movietowne.com/arcade.htm">Video Arcade</a></li>
+
+                                                </ul>
+
+                                            </li>
+
+                                        </ul>
+
+                            </div>
+
+                        <!-- Navigation and searchox ends -->
+
+                  </td>
+
+                </tr>
+
+            </tbody></table></td>
+
+          </tr>
+
+          <tr>
+
+            <td><img name="movietownemasthead_r5_c2" src="./Welcome to MOVIETOWNE_files/movietownemasthead_r5_c2.jpg" width="577" height="4" border="0" alt=""></td>
+
+          </tr>
+
+        </tbody></table>
+
+    </div></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="313" align="center" valign="middle" bgcolor="#FFFFFF"><a href="http://movietowne.com/#" id="adBannerurl"><img src="./Welcome to MOVIETOWNE_files/new_website_coming_soon.jpg" name="adBanner" id="adBanner" width="461" height="57" border="0"></a><!--<a href="#"><img src="images/movie_ad.gif" border="0"></a>--></td>
+
+    <td width="467" bgcolor="#FF9900"><a href="http://movietowne.com/commingsoon.shtml"><img src="./Welcome to MOVIETOWNE_files/movietownemastheadbottom.jpg" width="319" height="60" border="0"></a></td>
+
+  </tr>
+
+  <tr bgcolor="#FF9900">
+
+  
+
+    <td colspan="2">
+	      <table width="700" border="0" align="center" cellpadding="0" cellspacing="6">
+        <tbody><tr>
+          <td width="100">
+            <div align="center"><a href="http://movietowne.com/commingsoon.php"><img src="./Welcome to MOVIETOWNE_files/kingsman.jpg" width="100" height="150" border="0"></a></div>
+          </td>
+          <td width="100">
+            <div align="center"><a href="http://movietowne.com/commingsoon.php"><img src="./Welcome to MOVIETOWNE_files/thesecondbestexoticmarigoldhotel.jpg" width="100" height="150" border="0"></a></div>
+          </td>
+          <td width="100">
+            <div align="center"><a href="http://movietowne.com/commingsoon.php"><img src="./Welcome to MOVIETOWNE_files/unfinishedbusiness.jpg" width="100" height="150" border="0"></a></div>
+          </td>
+          <td width="100">
+            <div align="center"><a href="http://movietowne.com/commingsoon.php"><img src="./Welcome to MOVIETOWNE_files/jupiterascending.jpg" width="100" height="150" border="0"></a></div>
+          </td>
+          <td width="100">
+            <div align="center"><a href="http://movietowne.com/commingsoon.php"><img src="./Welcome to MOVIETOWNE_files/mallcop2.jpg" width="100" height="150" border="0"></a></div>
+          </td>
+          <td width="100">
+            <div align="center"><a href="http://movietowne.com/commingsoon.php"><img src="./Welcome to MOVIETOWNE_files/cinderella.jpg" width="100" height="150" border="0"></a></div>
+          </td>
+          <td width="100">
+            <div align="center"><a href="http://movietowne.com/commingsoon.php"><img src="./Welcome to MOVIETOWNE_files/legendofthe nverbeast.jpg" width="100" height="150" border="0"></a></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div align="center"><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Kingsman: The Secret Service</font></div>
+          </td>
+          <td>
+            <div align="center"><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">The Second Best Exotic Marigold Hotel</font></div>
+          </td>
+          <td>
+            <div align="center"><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Unfinished Business</font></div>
+          </td>
+          <td>
+            <div align="center"><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Jupiter Ascending 3D</font></div>
+          </td>
+          <td>
+            <div align="center"><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Mall Cop 2</font></div>
+          </td>
+          <td>
+            <div align="center"><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Cinderella</font></div>
+          </td>
+          <td>
+            <div align="center"><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Legend of the NeverBeast:Tinkerbelle</font></div>
+          </td>
+        </tr>
+      </tbody></table>
+		
+
+        <div align="center"></div></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2" bgcolor="#000066"><table width="100%" border="0" cellpadding="0" cellspacing="1">
+
+        <tbody><tr>
+
+          <td background="./Welcome to MOVIETOWNE_files/bk_spotlights.gif"><img src="./Welcome to MOVIETOWNE_files/bk_spotlights.gif" width="51" height="21"></td>
+
+        </tr>
+
+    </tbody></table></td>
+
+  </tr>
+
+  <tr bgcolor="#000066">
+
+    <td colspan="2" bgcolor="#000066"><table width="780" border="0" cellpadding="0" cellspacing="0">
+
+        <tbody><tr>
+
+          <td width="180" valign="top" bgcolor="#12133F"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+              <tbody><tr>
+
+                <td><div align="center">
+
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                    <tbody><tr>
+
+                      <td bgcolor="#12133F">
+
+                        <div align="center"><img src="./Welcome to MOVIETOWNE_files/left_banner.jpg" width="187" height="810"></div></td></tr>
+                  </tbody></table>
+                </div></td>
+
+              </tr>
+
+          </tbody></table>          </td>
+
+          <td width="590" valign="top"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" hspace="0" vspace="0">
+
+              <tbody>
+
+                <tr>
+
+                  <td valign="top" width="280" bgcolor="#FF9900" height="444"><table cellspacing="0" cellpadding="0" width="280" bgcolor="#FF9900" border="0" vspace="0" hspace="0" height="100%">
+
+                      <tbody>
+
+                        <tr>
+
+                          <td align="center" valign="top"><div align="center">
+
+                            <table width="100%">
+                              <tbody><tr>
+                                <td><div align="center"><a href="http://movietowne.com/images/ad_carousel_lrg.jpg" target="_blank"><img src="./Welcome to MOVIETOWNE_files/ad_carousel_new.jpg" width="282" height="244" border="0"></a></div></td>
+                              </tr>
+                            </tbody></table>
+
+                               <table border="0" align="center" cellpadding="3" cellspacing="0" bgcolor="#000000" width="100%">
+
+                                <tbody>
+
+                                  <tr bgcolor="#000000">
+
+                                    <td colspan="4" bgcolor="#990000"><div align="center">
+
+                                      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="270" height="27">
+
+                                        <param name="movie" value="images/Movie3b.swf">
+
+                                        <param name="quality" value="high">
+
+                                        <param name="wmode" value="transparent">
+
+                                        <embed src="images/Movie3b.swf" width="270" height="27" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent">
+
+                                      </object>
+
+                                    </div></td>
+
+                                  </tr>
+
+                                </tbody>
+
+                              </table>
+
+
+
+                          <table border="1" align="center" cellpadding="3" cellspacing="0" bordercolor="#00A600">
+
+                           <tbody><tr>
+
+                                    <td><strong><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">Rank</font></strong></td>
+
+                                    <td><strong><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">Title</font></strong></td>
+
+                                    <td><strong><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">Weekend </font></strong></td>
+
+                                    <td><strong><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">Total 
+
+									Gross</font></strong></td>
+
+                                </tr>
+
+							
+                            <tr bgcolor="#FF6600">
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">1</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">American Sniper</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">107.21M </font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">110.64M </font></td>
+			                                      </tr>
+			                                      <tr>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">2</font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">Paddington </font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$25.49M</font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$25.49M</font></td>
+			                                      </tr>
+			                                      <tr bgcolor="#FF6600">
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">3</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">The Wedding Ringer</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">$24.04M</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">$24.04M</font></td>
+			                                      </tr>
+			                                      <tr>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">4</font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">Taken 3 </font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$17.05M</font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$65.84M</font></td>
+			                                      </tr>
+			                                      <tr bgcolor="#FF6600">
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">5</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Selma</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">$13.85M</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">$31.51M</font></td>
+			                                      </tr>
+			                                      <tr>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">6</font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">Into the Woods</font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$8.71M </font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$116.46</font></td>
+			                                      </tr>
+			                                      <tr bgcolor="#FF6600">
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">7</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">The Imitation Game </font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">$8.02M</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">$51.62M</font></td>
+			                                      </tr>
+			                                      <tr>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">8</font></td>
+			                                        <td bgcolor="#FF9A00"><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">The Hobbit: The Battle of the Five Armies </font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$5.98M </font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$245.66M</font></td>
+			                                      </tr>
+			                                      <tr bgcolor="#FF6600">
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">9</font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Night at the Museum: Secret of the Tomb </font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif"> $5.29M </font></td>
+			                                        <td><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">$106.24</font></td>
+			                                      </tr>
+			                                      <tr>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">10</font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">Unbroken </font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$5.02M</font></td>
+			                                        <td><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">$109.36</font></td>
+                                  </tr>
+
+
+                            </tbody><tbody> </tbody>
+
+                          </table>
+
+                         </div></td>
+
+                        </tr>
+
+                      </tbody>
+
+                  </table></td>
+
+                  <td valign="top" width="1" bgcolor="#666666" height="444"><img height="189" src="./Welcome to MOVIETOWNE_files/greyline.gif" width="1"></td>
+
+                  <td valign="top" width="310" bgcolor="#526DBD" height="444"><table height="100%" cellspacing="0" cellpadding="0" width="309" border="0">
+
+                      <tbody>
+
+                        <tr align="right">
+
+                          <td width="295" colspan="2" height="189"><table width="100%" border="0" cellspacing="0" cellpadding="3">
+
+                              <tbody><tr>
+
+                                <td valign="bottom"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                    <tbody><tr>
+
+                                      <td><p><b><font color="#FF9933" size="2" face="Arial, Helvetica, sans-serif">
+
+										WELCOME TO MOVIETOWNE</font><font color="#FF6600" size="2" face="Arial, Helvetica, sans-serif"><br>
+
+                                                                                    </font><font size="2" face="Arial, Helvetica, sans-serif"><br>
+
+                                                                                    </font></b><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">
+
+										MovieTowne is the #1 entertainment and 
+
+										shopping complex in The Caribbean, with 
+
+										the first of its kind 10 screen cineplex 
+
+										theater. We invite you to step into the 
+
+										magical world of MovieTowne and enjoy a 
+
+										thrilling, relaxing and entertaining 
+
+										experience.</font> <font color="#FFFF00" size="2" face="Arial, Helvetica, sans-serif"><a href="http://movietowne.com/family.htm">
+
+										MORE&gt;&gt;</a></font><a href="http://movietowne.com/about.htm"><br>
+
+                                                                                </a> </p></td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                      <td><br>
+
+                                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                            <tbody><tr>
+
+                                              <td height="12" width="7%"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></td>
+
+                                              <td height="12" width="49%"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif">
+
+												10 State-of-the-Art Cinemas</font></td>
+
+                                              <td height="12" width="6%"><font size="1" face="Arial, Helvetica, sans-serif"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></font></td>
+
+                                              <td height="12" width="38%"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif">
+
+												Restaurants</font></td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                              <td width="7%"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></td>
+
+                                              <td width="49%" valign="top"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif"> 
+
+												Shopping Mall &amp; PriceSmart</font></td>
+
+                                              <td width="6%"><font size="1" face="Arial, Helvetica, sans-serif"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></font></td>
+
+                                              <td width="38%"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif">
+
+												Hollywood Cafe</font></td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                              <td width="7%"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></td>
+
+                                              <td width="49%"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif"> 
+
+												Kids Party &amp; Play Rooms</font></td>
+
+                                              <td width="6%"><font size="1" face="Arial, Helvetica, sans-serif"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></font></td>
+
+                                              <td width="38%"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif">
+
+												Courtyard Cocktail Bar</font></td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                              <td width="7%"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></td>
+
+                                              <td width="49%"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif">
+
+												Video Arcade</font></td>
+
+                                              <td width="6%"><font size="1" face="Arial, Helvetica, sans-serif"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></font></td>
+
+                                              <td width="38%"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif">
+
+												Outdoor Playground</font></td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                              <td width="7%"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></td>
+
+                                              <td width="49%"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif">
+
+												Baby Sitting Services</font></td>
+
+                                              <td width="6%"><font size="1" face="Arial, Helvetica, sans-serif"><img src="./Welcome to MOVIETOWNE_files/star.gif" width="20" height="14"></font></td>
+
+                                              <td width="38%"><font color="#FF9900" size="1" face="Arial, Helvetica, sans-serif">
+
+												Parking for 1000 cars</font></td>
+
+                                            </tr>
+
+                                        </tbody></table></td>
+
+                                    </tr>
+
+                                </tbody></table></td>
+
+                              </tr>
+
+                          </tbody></table></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td valign="top" align="left" bgcolor="#cc3300"><table cellspacing="0" cellpadding="0" width="100%" border="0" hspace="0" vspace="0">
+
+                              <tbody>
+
+                                <tr valign="top" align="middle">
+
+                                  <td><table height="20" cellspacing="0" cellpadding="0" width="100%" background="./Welcome to MOVIETOWNE_files/silver_back.gif" border="0" hspace="0" vspace="0">
+
+                                      <tbody>
+
+                                        <tr>
+
+                                          <td align="left"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif"><strong><img src="./Welcome to MOVIETOWNE_files/spacer.gif" width="5" height="10">Admission</strong></font><font color="#000066" size="2" face="Arial, Helvetica, sans-serif">&nbsp;</font></td>
+
+                                        </tr>
+
+                                      </tbody>
+
+                                    </table>
+
+                                      <table cellspacing="0" cellpadding="0" width="100%" border="0" hspace="0" vspace="0">
+
+                                        <tbody>
+
+                                          <tr valign="top" align="left">
+
+                                            <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#cc3300" hspace="0" vspace="0">
+
+                                                <tbody>
+
+                                                  <tr valign="top" align="left">
+
+                                                    <td align="left" valign="top" bgcolor="#cc3300"><table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#FFF300">
+
+                                                        <tbody><tr bgcolor="#000063" class="text">
+
+                                                          <td colspan="2"><strong><font color="#FFFFFF">
+
+															General Admission</font></strong> </td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>*Adults</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$50</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>* Kids 12 &amp; Under&nbsp;</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$40</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>* 3D Adults</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$60</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>* 3D Kids 12 &amp; 
+
+															Under&nbsp;</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$50</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#000063" class="text">
+
+                                                          <td colspan="2"><strong><font color="#FFFFFF">
+
+															MATINEE SHOWS &nbsp;</font></strong><font color="#FFF300">&nbsp;</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>(Mon. - Fri. 
+
+															before 4pm) </td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">&nbsp;
+
+															</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>Adults</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$45</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>Kids 12 &amp; Under</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$35</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>3D Adults</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$55</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>3D Kids 12 &amp; Under</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$45</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>Seniors 60+ &amp; 
+
+															TTARP</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$30</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>3D Seniors 60+ &amp; 
+
+															TTARP</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$45</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#000063" class="text">
+
+                                                          <td colspan="2"><strong><font color="#FFFFFF">
+
+															MONDAYS (Any time) &nbsp;</font></strong><font color="#FFF300">&nbsp;</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>TTARP Members</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$25</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>Tertiary Students</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$35</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>3D TTARP Members</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$40</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>3D Tertiary 
+
+															Students</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$45</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#000063" class="text">
+
+                                                          <td colspan="2"><strong><font color="#FFFFFF">
+
+															TUESDAYS (Any time) 
+
+															&nbsp;</font></strong><font color="#FFF300">&nbsp;</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>Regular movies</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$40</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td>3D movies</td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$50</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td colspan="2">&nbsp;</td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td bgcolor="#CE3000"><strong>
+
+															Disabled Regular</strong></td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$25</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#CE3000" class="text">
+
+                                                          <td bgcolor="#CE3000"><strong>
+
+															Disabled 3D </strong></td>
+
+                                                          <td bgcolor="#cc3300"><font color="#FFF300">
+
+															$35</font></td>
+
+                                                        </tr>
+
+                                                        <tr bgcolor="#cc3300" class="text">
+
+                                                          <td colspan="2"><div align="center"><font color="#FFFFFF">
+
+															*General Admission 
+
+															prices apply on 
+
+															Weekends, Public 
+
+															Holidays and School 
+
+															Vacation. &nbsp;</font></div></td>
+
+                                                        </tr>
+
+                                                    </tbody></table></td>
+
+                                                  </tr>
+
+                                                </tbody>
+
+                                            </table></td>
+
+                                          </tr>
+
+                                        </tbody>
+
+                                    </table></td>
+
+                                </tr>
+
+                              </tbody>
+
+                          </table></td>
+
+                          <td valign="top" bgcolor="#546eb8" background="./Welcome to MOVIETOWNE_files/givawaybk.jpg"><table cellspacing="0" cellpadding="0" width="100%" border="0" hspace="0" vspace="0">
+
+                              <tbody>
+
+                                <tr valign="top" align="middle">
+
+                                  <td><table height="20" cellspacing="0" cellpadding="0" width="100%" background="./Welcome to MOVIETOWNE_files/silver_back.gif" border="0" hspace="0" vspace="0">
+
+                                      <tbody>
+
+                                        <tr>
+
+                                          <td align="left"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif"><strong><img src="./Welcome to MOVIETOWNE_files/spacer.gif" width="5" height="10">Amenities</strong></font></td>
+
+                                        </tr>
+
+                                      </tbody>
+
+                                    </table>
+
+                                      <table cellspacing="0" cellpadding="0" width="100%" border="0" hspace="0" vspace="0">
+
+                                        <tbody>
+
+                                          <tr valign="top" align="left">
+
+                                            <td><table width="100%" border="0" cellpadding="1" cellspacing="5" bgcolor="#546eb8" hspace="0" vspace="0">
+
+                                                <tbody>
+
+                                                  <tr valign="top" align="left">
+
+                                                    <td align="left" valign="top" bgcolor="#546eb8"><font color="#FFCC00"><img src="./Welcome to MOVIETOWNE_files/amenities.jpg" width="121" height="299"></font></td>
+
+                                                  </tr>
+
+                                                </tbody>
+
+                                            </table></td>
+
+                                          </tr>
+
+                                        </tbody>
+
+                                    </table></td>
+
+                                </tr>
+
+                              </tbody>
+
+                          </table></td>
+
+                        </tr>
+
+                      </tbody>
+
+                  </table></td>
+
+                </tr>
+
+              </tbody>
+
+          </table></td>
+
+        </tr>
+
+    </tbody></table></td>
+
+  </tr>
+
+  <tr bgcolor="#000066">
+
+    <td colspan="2" bgcolor="#424D6C"><table cellspacing="1" cellpadding="4" width="780" align="center" bgcolor="#424d6c">
+
+        <tbody>
+
+          <tr>
+
+            <td align="middle" colspan="2"><div align="center"><font face="Arial, Helvetica, sans-serif" size="2"><nobr></nobr></font></div>
+
+                <table cellspacing="4" cellpadding="0" border="0" width="573" align="center">
+
+                  <!-- Begin left side nav table -->
+
+                  <tbody>
+
+                    <tr>
+
+                      <td height="2"><!--<form name="form1" method="post" action="http://movietowne.com/cgi-bin/list.cgi">-->
+
+                          <table width="109%" border="0" cellpadding="0" cellspacing="0" align="right">
+
+                            <tbody><tr>
+
+                              <td valign="middle" width="51%"><!-- This is the field representing where the form information will get sent. -->
+
+                                  <!--<input type=hidden name="required" value="email">-->
+
+                                  <div align="center"><font face="Arial, Helvetica, sans-serif" size="1" color="#FF9900"><a href="http://movietowne.com/landing.php" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; size:1; color:#FF9900;">
+
+									Subscribe to SMS/Email List</a></font></div></td>
+
+                              <!--<td valign="top" width="25%"><input name=email
+
+                        size=15
+
+                        style="BACKGROUND-COLOR: #cc7600; COLOR: #ffffff; FONT-FAMILY: Verdana; FONT-SIZE: 8pt; HEIGHT: 18px; WIDTH: 128px"
+
+                        value="Your  E-mail address ">
+
+                                  <br>
+
+                              </td>-->
+
+                              <!--<td valign="bottom"><table width="139" border="0" cellpadding="0" cellspacing="0">
+
+                                  <tr>
+
+                                    <td><input type="image" src="images/submit.gif" width="63" height="16" border="0" name=search>
+
+                                    </td>
+
+                                  </tr>
+
+                                  <tr>
+
+                                    <td><img src="/images/indeximage/spacer.gif" width="1" height="1"></td>
+
+                                  </tr>
+
+                              </table></td>-->
+
+                            </tr>
+
+                          </tbody></table>
+
+                      <!--</form>--></td>
+
+                    </tr>
+
+                  </tbody>
+
+              </table></td>
+
+          </tr>
+
+          <tr>
+
+            <td align="middle" width="380"><font color="#999999" size="2" face="Arial, Helvetica, sans-serif">
+
+			©2002 Multicinemas Trinidad Ltd.</font></td>
+
+            <td align="middle" width="380"><font size="2" face="Arial, Helvetica, sans-serif"><a href="http://movietowne.com/contactus.php" class="link">
+
+			EMAIL us here</a></font></td>
+
+          </tr>
+
+        </tbody>
+
+    </table></td>
+
+  </tr>
+
+</tbody></table>
+
+
+
+
+
+<map name="movietownemasthead_r1_c1Map">
+
+  <area shape="rect" coords="719,2,777,23" href="./Welcome to MOVIETOWNE_files/Welcome to MOVIETOWNE.html">
+
+<area shape="rect" coords="504,2,698,20" href="http://movietowne.com/landing.php">
+
+</map>
+
+<script type="text/javascript">
+
+
+
+  var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-19404060-1']);
+
+  _gaq.push(['_trackPageview']);
+
+
+
+  (function() {
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+  })();
+
+
+
+</script>
+
+
+</body></html>
